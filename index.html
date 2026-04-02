@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lleno de zafiros</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="assets/bg.mp4" type="video/mp4" />
+    </video>
+
+    <main class="app">
+      <section class="card full-card">
+        <div class="top-section">
+          <div class="cover-section">
+            <img src="assets/cover.jpg" alt="Portada del disco" class="cover" />
+          </div>
+
+          <div class="info-section">
+            <h1 id="song-title">LLENO DE ZAFIROS</h1>
+            <h2 id="song-artist">WOS</h2>
+            <p class="message">Para vos, gordo ❤️</p>
+
+            <div class="player">
+              <div class="controls">
+                <button
+                  id="play-pause-btn"
+                  class="control-btn icon-btn"
+                  type="button"
+                >
+                  <svg id="play-icon" viewBox="0 0 24 24" class="icon">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+
+                  <svg id="pause-icon" viewBox="0 0 24 24" class="icon hidden">
+                    <path d="M6 5h4v14H6zm8 0h4v14h-4z" />
+                  </svg>
+                </button>
+
+                <button
+                  id="restart-btn"
+                  class="control-btn secondary icon-btn"
+                  type="button"
+                >
+                  <svg viewBox="0 0 24 24" class="icon">
+                    <path d="M12 5V1L7 6l5 5V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="progress-area">
+                <input
+                  id="progress-bar"
+                  class="progress-bar"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  step="0.1"
+                />
+                <div class="time-row">
+                  <span id="current-time">0:00</span>
+                  <span id="duration">0:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lyrics-section" id="lyrics-single">
+          <p id="current-line">Cargando letra...</p>
+        </div>
+
+        <audio id="audio">
+          <source src="assets/song.mp3" type="audio/mpeg" />
+        </audio>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
